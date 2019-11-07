@@ -19,7 +19,7 @@ Course & Course::operator =(const Course & m) {
 }
 bool Course::operator == (const Course & m) const {
     //TODO: checking if courses are equal based on the title, day, starttime and finishtime
-    if(title == m.title && day == m.day && start_time == m.start_time && finish_time == m.finish_time)
+    if(day == m.day && m.start_time >= start_time && m.start_time <= finish_time)
         return true;
     return false;
 }
@@ -63,7 +63,6 @@ ostream & operator << (ostream &os, const Course & m)
         case 6:
             dateLetter = 'U';
             break;
-
     }
     os << m.title << " " << dateLetter << " " << m.start_time << " " << m.finish_time << endl;
     return os;
