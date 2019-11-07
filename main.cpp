@@ -12,7 +12,7 @@
 using namespace std;
 
 /*
- * print schedule - outputs course schedule to the scree
+ * print schedule - outputs course schedule to the screen
  * @param - add any new parameters you need
  */
 void printSchedule()
